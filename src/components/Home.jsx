@@ -24,9 +24,10 @@ const Home = ({ }) => {
              <Bookappointmentbutton/>
             </Col>
             <Col lg={6} md={6} sm={12}>
-            <img src={coverimage} style={{maxHeight:"100%",maxWidth:"100%",marginTop:"35px",borderRadius:"10px"}}/>
+            <img src={coverimage} style={{maxHeight:"100%",maxWidth:"100%",marginTop:"35px",borderRadius:"4px"}}/>
             </Col>
           </Row>
+          <hr style={{ border: "1px solid black", margin: "0" }} />
         </Container>
       </div>
     </>
