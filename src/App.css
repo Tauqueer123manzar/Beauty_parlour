@@ -25,3 +25,12 @@
   .container{
     background-color: rgb(246, 173, 198);
   }
+
+  .vertical-line {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 2px;
+    height: 100%;
+    background-color: #2e2c2c; /* Adjust the color as needed */
+  }

@@ -1,18 +1,20 @@
 import './App.css'
-import {Routes,Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header'
-// import coverimage from '././assets/cover.jpg'
 import Service from './components/Service'
 import Home from './components/Home'
+import Appointment from './components/Appointment'
 function App() {
   return (
     <>
-     <Header/>
-     <Home/>
-     <Service/>
-     <Routes>
-       
-     </Routes>
+      <Router>
+        <Header />
+        <Home />
+        <Service />
+        <Routes>
+          <Route path='/appointment' element={<Appointment />} />
+        </Routes>
+      </Router>
     </>
   )
 }

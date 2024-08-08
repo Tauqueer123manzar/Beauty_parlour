@@ -27,7 +27,7 @@ const  Header= () => {
             <Nav.Link href="#home" className="navbar-link">HOME</Nav.Link>
             <Nav.Link href="#service" className="navbar-link">SERVICES</Nav.Link>
             <Nav.Link href="#stylist" className="navbar-link">STYLIST PROFILES</Nav.Link>
-            <Nav.Link as={NavLink} to="/appointment" className="navbar-link">APPOINTMENT</Nav.Link>
+            <Nav.Link href="#appointment" className="navbar-link">APPOINTMENT</Nav.Link>
             <Nav.Link href="#contact" className="navbar-link">CONTACT</Nav.Link>
           </Nav>
           <ul style={{display:"flex"}}>
