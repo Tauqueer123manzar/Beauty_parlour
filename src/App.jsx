@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Service from './components/Service'
 import Home from './components/Home'
 import Appointment from './components/Appointment'
+import Footer from './components/Footer'
+import Contact from './components/Contact';
 function App() {
   return (
     <>
@@ -11,9 +13,9 @@ function App() {
         <Header />
         <Home />
         <Service />
-        <Routes>
-          <Route path='/appointment' element={<Appointment />} />
-        </Routes>
+        <Appointment/>
+        <Contact/>
+        <Footer/>
       </Router>
     </>
   )

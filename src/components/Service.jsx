@@ -11,22 +11,26 @@ const serviceData = [
   {
     id: 1,
     title: "Hair Design",
-    image: hairdesign
+    image: hairdesign,
+    description: 'Professional haircuts by our experienced stylists.' 
   },
   {
     id: 2,
     title: "Hair Colouring",
-    image: haircolouring
+    image: haircolouring,
+    description: 'Beautiful color options to suit your style.' 
   },
   {
     id: 3,
     title: "Makeup",
-    image: makeup
+    image: makeup,
+    description: 'Relaxing manicure services.'
   },
   {
     id: 4,
     title: "Manicure",
-    image: manicure
+    image: manicure,
+    description: 'Complete pedicure treatment.'
   }
 ];
 
@@ -41,10 +45,11 @@ const Service = () => {
           {
             serviceData.map(service => (
               <Col sm={12} md={6} lg={3} key={service.id}>
-                <Card className="bg-secondary card-hover" style={{ width: '20rem', height: "350px", margin: "7px", padding: "10px", marginLeft: "auto", marginRight: "auto" }}>
+                <Card className="bg-secondary card-hover" style={{ width: '20rem', height: "400px", margin: "7px", padding: "10px", marginLeft: "auto", marginRight: "auto" }}>
                   <Card.Img variant="top" src={service.image} style={{ height: '230px', objectFit: 'cover' }} />
                   <Card.Body className='text-center'>
                     <Card.Title className='text-light fs-3 m-4'>{service.title}</Card.Title>
+                     <Card.Text>{service.description}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>

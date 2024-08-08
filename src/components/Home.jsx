@@ -6,8 +6,8 @@ import '../App.css'
 const Home = ({ }) => {
   return (
     <>
-      <div className='container' style={{maxWidth:"100%",maxHeight:"100%"}}>
-      <h1 className='text-center p-4' style={{fontFamily:"initial"}}>LUXE AURA BEAUTY</h1>
+      <div className='container' style={{ maxWidth: "100%", maxHeight: "100%" }}>
+        <h1 className='text-center p-4' style={{ fontFamily: "initial" }}>LUXE AURA BEAUTY</h1>
         <Container fluid>
           <Row>
             <Col lg={5} md={6} sm={12} className='m-4 fs-5 p-4'>
@@ -19,12 +19,12 @@ const Home = ({ }) => {
                 Whether you're looking for a fresh new hairstyle, a rejuvenating facial,
                 or a glamorous makeover, our team of skilled professionals is here to bring out the best in you.
               </p>
-             <p style={{color:"white",fontsize:"22px",fontWeight:"700",marginTop:"28px"}}>BEAUTY PALOUR SALON</p>
-             <h1 style={{fontSize:"40px",fontFamily:"fantasy"}}>ENHANCE YOUR BEAUTY AND UNQUIENESS</h1>
-             <Bookappointmentbutton/>
+              <p style={{ color: "white", fontsize: "22px", fontWeight: "700", marginTop: "28px" }}>BEAUTY PALOUR SALON</p>
+              <h1 style={{ fontSize: "40px", fontFamily: "fantasy" }}>ENHANCE YOUR BEAUTY AND UNQUIENESS</h1>
+              <Bookappointmentbutton section="appointment" />
             </Col>
             <Col lg={6} md={6} sm={12}>
-            <img src={coverimage} style={{maxHeight:"100%",maxWidth:"100%",marginTop:"35px",borderRadius:"4px"}}/>
+              <img src={coverimage} style={{ maxHeight: "100%", maxWidth: "100%", marginTop: "35px", borderRadius: "4px" }} />
             </Col>
           </Row>
           <hr style={{ border: "1px solid black", margin: "0" }} />
