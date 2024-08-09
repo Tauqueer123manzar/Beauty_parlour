@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
-import '../App.css'
+import '../App.css';
+
 const Appointment = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -11,6 +12,8 @@ const Appointment = () => {
     service: ""
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -19,9 +22,58 @@ const Appointment = () => {
     });
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Name validation
+    if (!formData.name) {
+      newErrors.name = "Name is required";
+    } else if (formData.name.length < 3) {
+      newErrors.name = "Name must be at least 3 characters";
+    }
+
+    // Email validation
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!emailPattern.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    // Phone validation
+    const phonePattern = /^[0-9]{10}$/;
+    if (!formData.phone) {
+      newErrors.phone = "Phone number is required";
+    } else if (!phonePattern.test(formData.phone)) {
+      newErrors.phone = "Please enter a valid 10-digit phone number";
+    }
+
+    // Date validation
+    if (!formData.date) {
+      newErrors.date = "Date is required";
+    }
+
+    // Time validation
+    if (!formData.time) {
+      newErrors.time = "Time is required";
+    }
+
+    // Service validation
+    if (!formData.service) {
+      newErrors.service = "Please select a service";
+    }
+
+    setErrors(newErrors);
+
+    // Return true if no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
+    if (validateForm()) {
+      console.log("Form submitted", formData);
+    }
   };
 
   return (
@@ -56,52 +108,71 @@ const Appointment = () => {
                   name='name'
                   value={formData.name}
                   onChange={handleChange}
-                  required
+                  isInvalid={!!errors.name}
                 />
+                <Form.Control.Feedback type="invalid">
+                  {errors.name}
+                </Form.Control.Feedback>
               </Form.Group>
+
               <Form.Group controlId='formEmail' className='mb-3'>
                 <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="email"
-                  placeholder='Enter your mail'
+                  placeholder='Enter your email'
                   name='email'
                   value={formData.email}
                   onChange={handleChange}
-                  required
+                  isInvalid={!!errors.email}
                 />
+                <Form.Control.Feedback type="invalid">
+                  {errors.email}
+                </Form.Control.Feedback>
               </Form.Group>
+
               <Form.Group controlId='formPhone' className='mb-3'>
                 <Form.Label>Phone Number</Form.Label>
                 <Form.Control
-                  type='number'
+                  type='text'
                   placeholder='Enter your mobile number'
                   name='phone'
                   value={formData.phone}
                   onChange={handleChange}
-                  required
+                  isInvalid={!!errors.phone}
                 />
+                <Form.Control.Feedback type="invalid">
+                  {errors.phone}
+                </Form.Control.Feedback>
               </Form.Group>
+
               <Form.Group controlId='formDate' className='mb-3'>
                 <Form.Label>Date</Form.Label>
                 <Form.Control
-                  type='Date'
-                  placeholder='Enter Date'
+                  type='date'
                   name='date'
                   value={formData.date}
                   onChange={handleChange}
-                  required
+                  isInvalid={!!errors.date}
                 />
+                <Form.Control.Feedback type="invalid">
+                  {errors.date}
+                </Form.Control.Feedback>
               </Form.Group>
+
               <Form.Group controlId='formTime' className='mb-3'>
                 <Form.Label>Time</Form.Label>
                 <Form.Control
                   type='time'
-                  placeholder='Enter Time'
                   name='time'
                   value={formData.time}
                   onChange={handleChange}
+                  isInvalid={!!errors.time}
                 />
+                <Form.Control.Feedback type="invalid">
+                  {errors.time}
+                </Form.Control.Feedback>
               </Form.Group>
+
               <Form.Group controlId='formService'>
                 <Form.Label>Service</Form.Label>
                 <Form.Control
@@ -109,7 +180,8 @@ const Appointment = () => {
                   name='service'
                   value={formData.service}
                   onChange={handleChange}
-                  required>
+                  isInvalid={!!errors.service}
+                >
                   <option value="">Select a service</option>
                   <option value="Haircut">Haircut</option>
                   <option value="Hair Coloring">Hair Coloring</option>
@@ -117,7 +189,11 @@ const Appointment = () => {
                   <option value="Pedicure">Pedicure</option>
                   <option value="Facial">Facial</option>
                 </Form.Control>
+                <Form.Control.Feedback type="invalid">
+                  {errors.service}
+                </Form.Control.Feedback>
               </Form.Group>
+
               <Button variant="primary" type="submit" className='mt-4'>
                 Book Appointment
               </Button>
@@ -127,7 +203,7 @@ const Appointment = () => {
       </Container>
       <hr style={{ border: "1px solid black", margin: "0" }} />
     </section>
-  )
+  );
 }
 
-export default Appointment
+export default Appointment;

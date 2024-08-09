@@ -1,7 +1,8 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
+import Appointment from '../components/Appointment'
 import { useNavigate } from 'react-router-dom';
-const Bookappointmentbutton = ({ section = "appointment" }) => {
+const Bookappointmentbutton = () => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(`#${section}`);
@@ -13,7 +14,7 @@ const Bookappointmentbutton = ({ section = "appointment" }) => {
       size="lg"
       className="book-appointment-btn" style={{ marginTop: "45px" }}
     >
-      Book Appointment
+    Book Appointment
     </Button>
   )
 }

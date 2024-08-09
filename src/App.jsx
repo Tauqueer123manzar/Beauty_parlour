@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Appointment from './components/Appointment'
 import Footer from './components/Footer'
 import Contact from './components/Contact';
+import Stylists from './components/Stylists';
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Home />
         <Service />
+        <Stylists/>
         <Appointment/>
         <Contact/>
         <Footer/>

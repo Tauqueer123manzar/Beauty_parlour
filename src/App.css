@@ -34,3 +34,47 @@
     height: 100%;
     background-color: #2e2c2c; /* Adjust the color as needed */
   }
+  .card-hover {
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .card-hover:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-hover img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-hover:hover img {
+    transform: scale(1.1);
+  }
+  
+  .stylist-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .stylist-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-hover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Horizontal line under the buttons */
+.horizontal-line {
+  position: absolute;
+  bottom: -2px; /* Adjusts the position just below the buttons */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black;
+}
