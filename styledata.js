@@ -15,97 +15,97 @@ const stylistData = [
     {
       id: 1,
       image: hairdesign1,
-      name: "style1",
+      name: "style-1",
       category: "Hair Design",
-      price: 800,
+      price: "800₹",
       description: "This is good for you"
     },
     {
       id: 2,
       image: hairdesign2,
-      name: "style2",
+      name: "style-2",
       category: "Hair Design",
-      price: 1000,
+      price: "1000₹",
       description: "This is good for you"
     },
     {
       id: 3,
       image: hairdesign3,
-      name: "style3",
+      name: "style-3",
       category: "Hair Design",
-      price: 1200,
+      price: "1200₹",
       description: "This is good for you"
     },
     {
       id: 4,
       image: hairdesign4,
-      name: "style4",
+      name: "style-4",
       category: "Hair Design",
-      price: 1400,
+      price: "1400₹",
       description: "This is good for you"
     },
     {
       id: 5,
       image: haircoluring1,
-      name: "coloring1",
+      name: "coloring-1",
       category: "Hair Colour",
-      price: 2000,
+      price: "2000₹",
       description: "This is good for you"
     },
     {
       id: 6,
       image: haircoluring2,
-      name: "coloring2",
+      name: "coloring-2",
       category: "Hair Colour",
-      price: 1800,
+      price: "1800₹",
       description: "This is good for you"
     },
     {
       id: 7,
       image: haircoluring3,
-      name: "coloring3",
+      name: "coloring-3",
       category: "Hair Colour",
-      price: 900,
+      price: "900₹",
       description: "This is good for you"
     },
     {
       id: 8,
       image: haircoluring4,
-      name: "coloring4",
+      name: "coloring-4",
       category: "Hair Colour",
-      price: 1700,
+      price: "1700₹",
       description: "This is good for you"
     },
     {
       id: 9,
       image: makeup1,
-      name: "makeup1",
+      name: "makeup-1",
       category: "Makeup",
-      price: 1200,
+      price: "1200₹",
       description: "This is good for you"
     },
     {
       id: 10,
       image: makeup2,
-      name: "makeup2",
+      name: "makeup-2",
       category: "Makeup",
-      price: 1200,
+      price: "1200₹",
       description: "This is good for you"
     },
     {
       id: 11,
       image: makeup3,
-      name: "makeup3",
+      name: "makeup-3",
       category: "Makeup",
-      price: 2300,
+      price: "2300₹",
       description: "This is good for you"
     },
     {
       id: 12,
       image: makeup4,
-      name: "makeup4",
+      name: "makeup-4",
       category: "Makeup",
-      price: 980,
+      price: "980₹",
       description: "This is good for you"
     },
 ];
