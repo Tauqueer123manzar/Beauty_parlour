@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
-import Appointment from '../components/Appointment'
+// import Appointment from '../components/Appointment'
 import { useNavigate } from 'react-router-dom';
 const Bookappointmentbutton = () => {
   const navigate = useNavigate();

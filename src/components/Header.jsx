@@ -12,7 +12,7 @@ import { FaYoutube } from "react-icons/fa";
 import '../App.css'
 const  Header= () => {
   return (
-       <Navbar expand="lg" className='p-2' style={{backgroundColor:"pink"}}>
+      <Navbar expand="lg" className='p-2' style={{backgroundColor:"pink"}}>
       <Container fluid>
         <Navbar.Brand href="#">
         <Image src={logo} width={150} height={70} alt="logo" />

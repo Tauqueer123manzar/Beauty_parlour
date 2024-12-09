@@ -26,7 +26,8 @@ const Stylists = () => {
           <Button variant="secondary" className="m-2" onClick={() => setItems(stylistData)}>All</Button>
         </Row>
         <Row className="mt-3 p-4">
-          {items.map((style) => (
+          {
+            items.map((style) => (
             <Col sm={12} md={4} lg={3} key={style.id}>
               <Card className="m-3 card-hover" style={{ maxWidth: "100%", height: "460px" }}>
                 <Card.Img variant="top" src={style.image} style={{ height: "200px", objectFit: "cover" }} />
